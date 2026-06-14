@@ -1343,14 +1343,14 @@
             <objects>
                 <viewController storyboardIdentifier="NewPublicGroupViewController" id="Taj-6P-tFd" customClass="NewPublicGroupViewController" customModule="sphinx" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BlE-66-Suu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1149"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1224"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ti-Pz-81W">
-                                <rect key="frame" x="0.0" y="99" width="414" height="1050"/>
+                                <rect key="frame" x="0.0" y="99" width="414" height="1125"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJP-PN-3SP">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1050"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1125"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LIE-dh-Rxt">
                                                 <rect key="frame" x="30" y="0.0" width="354" height="75"/>
@@ -1769,8 +1769,46 @@
                                                     <constraint firstAttribute="trailing" secondItem="eaN-Sr-CT9" secondAttribute="trailing" id="yza-WT-AG0"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xT-2x-Vbs">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sBU-rL-row">
                                                 <rect key="frame" x="30" y="775" width="354" height="75"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second Brain URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBU-rL-lbl">
+                                                        <rect key="frame" x="0.0" y="25" width="101" height="14"/>
+                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                                        <color key="textColor" name="SecondaryText"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sBU-rL-txt">
+                                                        <rect key="frame" x="0.0" y="39" width="354" height="35"/>
+                                                        <color key="textColor" name="Text"/>
+                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL" returnKeyType="done" textContentType="url"/>
+                                                    </textField>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sBU-rL-div">
+                                                        <rect key="frame" x="0.0" y="74" width="354" height="1"/>
+                                                        <color key="backgroundColor" name="LightDivider"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="sBU-div-hgt"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" name="Body"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sBU-rL-lbl" secondAttribute="trailing" constant="20" symbolic="YES" id="sBU-lbl-trail"/>
+                                                    <constraint firstItem="sBU-rL-div" firstAttribute="top" secondItem="sBU-rL-txt" secondAttribute="bottom" id="sBU-div-top"/>
+                                                    <constraint firstItem="sBU-rL-div" firstAttribute="leading" secondItem="sBU-rL-row" secondAttribute="leading" id="sBU-div-lead"/>
+                                                    <constraint firstItem="sBU-rL-txt" firstAttribute="top" secondItem="sBU-rL-lbl" secondAttribute="bottom" id="sBU-txt-top"/>
+                                                    <constraint firstItem="sBU-rL-lbl" firstAttribute="leading" secondItem="sBU-rL-row" secondAttribute="leading" id="sBU-lbl-lead"/>
+                                                    <constraint firstAttribute="bottom" secondItem="sBU-rL-div" secondAttribute="bottom" id="sBU-row-bot"/>
+                                                    <constraint firstAttribute="height" constant="75" id="sBU-row-hgt"/>
+                                                    <constraint firstItem="sBU-rL-txt" firstAttribute="leading" secondItem="sBU-rL-row" secondAttribute="leading" id="sBU-txt-lead"/>
+                                                    <constraint firstItem="sBU-rL-lbl" firstAttribute="top" secondItem="sBU-rL-row" secondAttribute="top" constant="25" id="sBU-lbl-top"/>
+                                                    <constraint firstItem="sBU-rL-txt" firstAttribute="trailing" secondItem="sBU-rL-div" secondAttribute="trailing" id="sBU-txt-trail"/>
+                                                    <constraint firstAttribute="trailing" secondItem="sBU-rL-div" secondAttribute="trailing" id="sBU-div-trail"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xT-2x-Vbs">
+                                                <rect key="frame" x="30" y="850" width="354" height="75"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="List on tribes.sphinx.chat?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IjR-gq-j9u">
                                                         <rect key="frame" x="0.0" y="39.5" width="280.5" height="20"/>
@@ -1796,7 +1834,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0SZ-BF-ubG">
-                                                <rect key="frame" x="30" y="850" width="354" height="75"/>
+                                                <rect key="frame" x="30" y="925" width="354" height="75"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Approve each membership request?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fz-nc-HRb">
                                                         <rect key="frame" x="0.0" y="39.5" width="280.5" height="20"/>
@@ -1822,7 +1860,7 @@
                                                 </constraints>
                                             </view>
                                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rwf-LC-tSi">
-                                                <rect key="frame" x="145.5" y="1005" width="123" height="30"/>
+                                                <rect key="frame" x="145.5" y="1080" width="123" height="30"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3QJ-cB-kWt" customClass="UIActivityIndicatorView">
                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -1850,7 +1888,7 @@
                                                 </constraints>
                                             </view>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cf2-1k-Ril">
-                                                <rect key="frame" x="92" y="950" width="230" height="50"/>
+                                                <rect key="frame" x="92" y="1025" width="230" height="50"/>
                                                 <color key="backgroundColor" name="PrimaryBlue"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="2sU-W3-Knl"/>
@@ -1867,7 +1905,7 @@
                                                 </connections>
                                             </button>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o3Z-vD-YN1" customClass="UIActivityIndicatorView">
-                                                <rect key="frame" x="267" y="950" width="50" height="50"/>
+                                                <rect key="frame" x="267" y="1025" width="50" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="KBk-k0-EU8"/>
@@ -1892,13 +1930,16 @@
                                             <constraint firstItem="0SZ-BF-ubG" firstAttribute="leading" secondItem="QJP-PN-3SP" secondAttribute="leading" constant="30" id="D9g-HN-XYi"/>
                                             <constraint firstAttribute="trailing" secondItem="rbZ-K7-NHa" secondAttribute="trailing" constant="30" id="F1G-fZ-EhD"/>
                                             <constraint firstAttribute="trailing" secondItem="qJ9-mq-Whh" secondAttribute="trailing" constant="30" id="HNU-AE-S6p"/>
-                                            <constraint firstItem="4xT-2x-Vbs" firstAttribute="top" secondItem="mmm-U1-ShD" secondAttribute="bottom" id="IHV-aV-c6a"/>
+                                            <constraint firstItem="4xT-2x-Vbs" firstAttribute="top" secondItem="sBU-rL-row" secondAttribute="bottom" id="IHV-aV-c6a"/>
                                             <constraint firstAttribute="trailing" secondItem="4xT-2x-Vbs" secondAttribute="trailing" constant="30" id="Io1-J3-kPv"/>
                                             <constraint firstItem="o3Z-vD-YN1" firstAttribute="bottom" secondItem="cf2-1k-Ril" secondAttribute="bottom" id="JFb-jx-FKb"/>
                                             <constraint firstItem="rbZ-K7-NHa" firstAttribute="leading" secondItem="QJP-PN-3SP" secondAttribute="leading" constant="30" id="Jxv-ea-xG1"/>
                                             <constraint firstItem="rbZ-K7-NHa" firstAttribute="top" secondItem="58q-bc-e3v" secondAttribute="bottom" id="NHR-EG-quT"/>
                                             <constraint firstItem="gJT-Ai-DzF" firstAttribute="leading" secondItem="QJP-PN-3SP" secondAttribute="leading" constant="30" id="PPM-xO-7Nn"/>
-                                            <constraint firstAttribute="height" constant="1050" id="SKm-mU-YP3"/>
+                                            <constraint firstAttribute="height" constant="1125" id="SKm-mU-YP3"/>
+                                            <constraint firstItem="sBU-rL-row" firstAttribute="leading" secondItem="QJP-PN-3SP" secondAttribute="leading" constant="30" id="sBU-row-lead"/>
+                                            <constraint firstItem="sBU-rL-row" firstAttribute="top" secondItem="mmm-U1-ShD" secondAttribute="bottom" id="sBU-row-top"/>
+                                            <constraint firstAttribute="trailing" secondItem="sBU-rL-row" secondAttribute="trailing" constant="30" id="sBU-row-trail"/>
                                             <constraint firstAttribute="trailing" secondItem="DuZ-AN-mBR" secondAttribute="trailing" constant="30" id="Sv5-Ti-SCz"/>
                                             <constraint firstItem="dMl-P4-1II" firstAttribute="leading" secondItem="QJP-PN-3SP" secondAttribute="leading" constant="30" id="VRq-ru-D0u"/>
                                             <constraint firstItem="LIE-dh-Rxt" firstAttribute="leading" secondItem="QJP-PN-3SP" secondAttribute="leading" constant="30" id="Vw9-E4-BSw"/>
@@ -1985,10 +2026,10 @@
                                 </constraints>
                             </view>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V6b-D7-2bU">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1149"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1224"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5b-AK-heR">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1149"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1224"/>
                                         <connections>
                                             <action selector="dismissTagsButtonTouched" destination="Taj-6P-tFd" eventType="touchUpInside" id="FO7-kC-jqg"/>
                                         </connections>
@@ -2031,7 +2072,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eeP-cd-Nbq"/>
                     </view>
-                    <size key="freeformSize" width="414" height="1149"/>
+                    <size key="freeformSize" width="414" height="1224"/>
                     <connections>
                         <outlet property="backButton" destination="4Ve-V8-ify" id="ZQf-nf-cu4"/>
                         <outlet property="closeButton" destination="lhO-Qb-nu4" id="CCV-Q3-Bw8"/>
@@ -2062,6 +2103,7 @@
                         <outletCollection property="formFields" destination="PE3-9A-lR0" collectionClass="NSMutableArray" id="rHK-ht-OwL"/>
                         <outletCollection property="formFields" destination="VhE-LO-6yC" collectionClass="NSMutableArray" id="1US-mz-XKy"/>
                         <outletCollection property="formFields" destination="XlA-Eo-fDr" collectionClass="NSMutableArray" id="e5o-gN-4UP"/>
+                        <outletCollection property="formFields" destination="sBU-rL-txt" collectionClass="NSMutableArray" id="sBU-rL-out"/>
                     </connections>
                 </viewController>
                 <view contentMode="scaleToFill" id="dgN-lY-hMA">

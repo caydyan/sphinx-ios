@@ -63,6 +63,7 @@ class NewPublicGroupViewController: KeyboardEventsViewController, BackCameraVC {
         case TimeToStake
         case AppUrl
         case FeedUrl
+        case SecondBrainUrl
     }
     
     var loading = false {

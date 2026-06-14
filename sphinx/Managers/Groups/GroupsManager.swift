@@ -135,6 +135,7 @@ class GroupsManager {
         var deleted : Bool = false
         var appUrl : String? = nil
         var feedUrl : String? = nil
+        var secondBrainUrl : String? = nil
         var ownerRouteHint : String? = nil
         var bots : [Bot] = []
         
@@ -280,6 +281,7 @@ class GroupsManager {
         parameters["private"] = newGroupInfo.privateTribe as AnyObject
         parameters["app_url"] = newGroupInfo.appUrl as AnyObject
         parameters["feed_url"] = newGroupInfo.feedUrl as AnyObject
+        parameters["second_brain_url"] = newGroupInfo.secondBrainUrl as AnyObject
         
         return parameters
     }
@@ -343,6 +345,7 @@ class GroupsManager {
         tribeInfo.deleted = json["deleted"].boolValue
         tribeInfo.appUrl = json["app_url"].string ?? tribeInfo.appUrl
         tribeInfo.feedUrl = json["feed_url"].string ?? tribeInfo.feedUrl
+        tribeInfo.secondBrainUrl = json["second_brain_url"].string ?? tribeInfo.secondBrainUrl
         tribeInfo.ownerRouteHint = json["owner_route_hint"].string ?? tribeInfo.ownerRouteHint
         
         var tags = getGroupTags()
