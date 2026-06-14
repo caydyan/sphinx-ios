@@ -425,6 +425,17 @@ public class Chat: NSManagedObject {
         }
         return nil
     }
+
+    func getSecondBrainUrl() -> String? {
+        if let tribeInfo = self.tribesInfo, let secondBrainUrl = tribeInfo.secondBrainUrl, !secondBrainUrl.isEmpty {
+            return secondBrainUrl
+        }
+        return nil
+    }
+
+    func getWebAppUrl() -> String? {
+        return getSecondBrainUrl() ?? getAppUrl()
+    }
     
     func getFeedUrl() -> String? {
         if let tribeInfo = self.tribesInfo, let feedUrl = tribeInfo.feedUrl, !feedUrl.isEmpty {

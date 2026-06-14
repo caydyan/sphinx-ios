@@ -171,10 +171,10 @@ class ChatHeaderView: UIView {
     }
     
     func configureWebAppButton() {
-        let hasWebAppUrl = chat?.getAppUrl() != nil
+        let hasWebAppUrl = chat?.getWebAppUrl() != nil
         webAppButtonTrailing.constant = hasWebAppUrl ? 0 : -30
         webAppButton.isHidden = !hasWebAppUrl
-        webAppButton.setTitle("apps", for: .normal)
+        webAppButton.setTitle(getWebAppIcon(), for: .normal)
     }
     
     func setVolumeState() {
@@ -194,7 +194,11 @@ class ChatHeaderView: UIView {
     }
     
     func toggleWebAppIcon(showChatIcon: Bool) {
-        webAppButton.setTitle(showChatIcon ? "chat" : "apps", for: .normal)
+        webAppButton.setTitle(showChatIcon ? "chat" : getWebAppIcon(), for: .normal)
+    }
+
+    func getWebAppIcon() -> String {
+        return chat?.getSecondBrainUrl() != nil ? "memory" : "apps"
     }
 
     @IBAction func backButtonTouched() {
